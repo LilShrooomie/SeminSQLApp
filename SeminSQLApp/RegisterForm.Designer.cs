@@ -57,6 +57,7 @@
             this.passField.Size = new System.Drawing.Size(382, 69);
             this.passField.TabIndex = 4;
             this.passField.UseSystemPasswordChar = true;
+            this.passField.TextChanged += new System.EventHandler(this.passField_TextChanged);
             // 
             // panel2
             // 

@@ -100,5 +100,9 @@ namespace SeminSQLApp
                 return false;
             }
         }
+        private void passField_TextChanged(object sender, EventArgs e)
+        {
+            passField.UseSystemPasswordChar = true;
+        }
     }
 }
