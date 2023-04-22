@@ -6,7 +6,28 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>Me.png</PackageIcon>
+    <ApplicationIcon>Me.ico</ApplicationIcon>
+    <AssemblyVersion>1.8532.5324.231</AssemblyVersion>
+    <FileVersion>412.5327.85.212</FileVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Me.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="H:\Me.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>H:\New Folder\MySql.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
