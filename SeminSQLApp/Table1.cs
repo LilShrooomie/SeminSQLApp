@@ -56,8 +56,14 @@ namespace SeminSQLApp
 
         private void label5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.MM.Show();
+            var res = MessageBox.Show("Вы уверены, что хотите выйти?", "Внимание!", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                this.Hide();
+                Program.MM.Show();
+            }
+            else
+            { }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -97,12 +103,16 @@ namespace SeminSQLApp
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.ColumnHeadersDefaultCellStyle.Font.FontFamily, 10f, FontStyle.Bold);
             dataGridView1.Columns[0].Width = 100;
             dataGridView1.Columns[1].Width = 100;
-            dataGridView1.Columns[0].HeaderText = "Код охранника";
+            dataGridView1.Columns[2].Width = 100; 
+            dataGridView1.Columns[3].Width = 100;
+            dataGridView1.Columns[0].HeaderText = "Код";
             dataGridView1.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns[1].HeaderText = "Код поста";
+            dataGridView1.Columns[1].HeaderText = "Код охранника";
             dataGridView1.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns[2].HeaderText = "Дата";
+            dataGridView1.Columns[2].HeaderText = "Код поста";
             dataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[3].HeaderText = "Дата";
+            dataGridView1.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             connection.Close();
         }
 
@@ -121,12 +131,14 @@ namespace SeminSQLApp
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.ColumnHeadersDefaultCellStyle.Font.FontFamily, 10f, FontStyle.Bold);
             dataGridView1.Columns[0].Width = 100;
             dataGridView1.Columns[1].Width = 100;
-            dataGridView1.Columns[0].HeaderText = "Код охранника";
+            dataGridView1.Columns[0].HeaderText = "Код";
             dataGridView1.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns[1].HeaderText = "Время замечания";
+            dataGridView1.Columns[1].HeaderText = "Код охранника";
             dataGridView1.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns[2].HeaderText = "Краткое описание";
+            dataGridView1.Columns[2].HeaderText = "Время замечания";
             dataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[3].HeaderText = "Краткое описание";
+            dataGridView1.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             connection.Close();
         }
     }
