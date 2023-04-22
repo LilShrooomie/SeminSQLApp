@@ -99,6 +99,7 @@
             this.passField.Location = new System.Drawing.Point(96, 224);
             this.passField.Multiline = true;
             this.passField.Name = "passField";
+            this.passField.PasswordChar = '*';
             this.passField.PlaceholderText = "Введите пароль";
             this.passField.Size = new System.Drawing.Size(268, 69);
             this.passField.TabIndex = 4;
